@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Function Bind() Method</h2>
+<p>Bind() function is use to borrow the method into another object.</p>
+<p id="demo"></p>
+<script>
+    const obj1={
+        firstName:"Bitu",lastName:"Kumar",fullName:function()
+        {
+            return this.firstName+" "+this.lastName;
+        }
+    }
+    const obj2={firstName:"Ram",lastName:"Singh"};
+    let obj3=obj1.fullName.bind(obj2);
+    document.getElementById("demo").innerHTML=obj3();
+</script>
+</body>
+</html>
